@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="utf-8">
+  <base href="/" />
+  <title>My todo client</title>
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="./bower_components/sweetalert/lib/sweet-alert.css">
+  <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <section class="content">
+    <section class="container">
+      <ng-include src="'app/views/header.html'"></ng-include>
+
+      <div ng-view></div>
+
+      <ng-include src="'app/views/footer.html'"></ng-include>
+
+
+    </section>
+  </section>
+
+
+  <script src="./bower_components/angular/angular.js"></script>
+  <script src="./bower_components/angular-route/angular-route.js"></script>
+  <script src="./bower_components/lodash/dist/lodash.js"></script>
+  <script src="./bower_components/angular-resource/angular-resource.js"></script>
+  <script src="./bower_components/sweetalert/lib/sweet-alert.js"></script>
+
+  <script src="./app/app.js"></script>
+  <script src="./app/config.js"></script>
+  <script src="./app/controllers/taskController.js"></script>
+  <script src="./app/services/taskFactory.js"></script>
+
+</body>
+</html>

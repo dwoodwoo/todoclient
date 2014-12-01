@@ -1,0 +1,25 @@
+<div data-ng-controller="taskController">
+
+<h2>Todo App</h2>
+
+
+<hr>
+<input placeholder='Any' ng-model="search.$"> <br>
+<input placeholder='Name only' ng-model="search.name"><br>
+<input placeholder='Description only' ng-model="search.description"><br>
+
+Exact Field Match <input type="checkbox" ng-model="strict"><br>
+
+
+<table id="searchObjResults" style="width: 100%;">
+  <tr><th> Name</th></tr>
+<!--   <tr class="spinner" ng-show="loading"><td style="width: 100%; text-align: center;"><img src="../images/preloader.gif"></td></tr> -->
+  <tr ng-repeat="task in tasks | filter:search:strict">
+    <td><a ng-mouseover="show(task)" href="/#/task/{{task.id}}">{{task.name}}, {{task.description}}</a></td>
+  </tr>
+</table>
+
+
+
+</div>
+
